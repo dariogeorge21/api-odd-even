@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+# Odd or Even Checker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React + Vite project that takes a number input and validates whether it's an odd or even number using the [Meutru Odd API](https://mewtru.com/is-odd).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Enter a number and check if it's odd or even
+- Uses [Meutru Odd API](https://mewtru.com/is-odd) for validation
+- Fast, modern UI built with React and Vite
 
-## Expanding the ESLint configuration
+## Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/69a6a7ae-7cfb-42c4-98c8-5942dce34fa6/deploy-status)](https://app.netlify.com/projects/splendorous-tiramisu-775404/deploys)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+1. **Clone the repo:**
+  ```bash
+  git clone https://github.com/your-username/odd-even-checker.git
+  cd odd-even-checker
+  ```
+
+2. **Install dependencies:**
+  ```bash
+  npm install
+  ```
+
+3. **Run the development server:**
+  ```bash
+  npm run dev
+  ```
+
+4. **Open in browser:**  
+  Visit `http://localhost:5173`
+
+## API Reference
+
+- **Endpoint:** `https://is-odd-api.mewtru.com/v1/numbers/{number}`
+`
+- **Usage:** Send a GET request with a `number` query parameter.
+
+Example:
+```
+GET https://is-odd-api.mewtru.com/v1/numbers/5
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+** Netlify **
