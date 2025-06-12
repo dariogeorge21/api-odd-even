@@ -47,4 +47,4 @@ GET https://is-odd-api.mewtru.com/v1/numbers/5
 
 ## Deployment
 
-** Netlify **
+- **Netlify**
